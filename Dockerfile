@@ -30,7 +30,7 @@ RUN go build -o api
 # production stage
 FROM nginx:stable-alpine as production-stage
 
-COPY ./.nginx/nginx.conf /etc/nginx/nginx.conf
+COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
 
 RUN rm -rf /usr/share/nginx/html/*
 
