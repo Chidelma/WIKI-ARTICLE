@@ -65,3 +65,5 @@ Open Another Terminal
 ```
 sudo docker container exec -it vuego /usr/share/nginx/html/api /usr/share/nginx/html/
 ```
+
+Visit http://localhost:8080 on the browser
