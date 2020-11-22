@@ -1,5 +1,7 @@
 # WIKI-VUE-GO WEB APPLICATION
 
+Note: Part I and II are Independent of Part III
+
 ## Go Server (Part I)
 
 Open a terminal
