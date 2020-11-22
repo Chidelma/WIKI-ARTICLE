@@ -1,29 +1,65 @@
-# art
+# WIKI-VUE-GO WEB APPLICATION
 
-## Project setup
+## Go Server (Part I)
+
+Open a terminal
+
+```
+cd api
+```
+
+### Run Tests
+```
+go test
+```
+
+### Run Build
+```
+go build main -o api 
+```
+then
+```
+./api
+```
+
+Use curl or broswer (localhost:9090/articles/) to see output
+
+## Vue SPA (Part II)
+
+Open another terminal
+
+### Install Dependencies
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your unit tests
+### Run Tests
 ```
 npm run test:unit
 ```
 
-### Lints and fixes files
+### Run Build
 ```
-npm run lint
+npm run build
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Docker (Part III)
+
+Open Terminal
+
+### Run Build
+```
+sudo docker build --tag md-wiki:2019 .
+```
+
+### Run Docker Container 
+```
+sudo docker run --name vuego -ti -p 8080:8080 md-wiki:2019
+```
+
+Open Another Terminal
+
+### Start Up Go Server
+```
+sudo docker container exec -it vuego /usr/share/nginx/html/api /usr/share/nginx/html/
+```
